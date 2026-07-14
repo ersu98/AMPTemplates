@@ -1,0 +1,14 @@
+[
+    {
+        "DisplayName": "PairDrop Version/Branch",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the branch name, tag, or commit hash to check out (e.g. master, v1.10.0)",
+        "Keywords": "pairdrop,snapdrop,sharing,version",
+        "FieldName": "ReleaseVersion",
+        "InputType": "text",
+        "ParamFieldName": "ReleaseVersion",
+        "DefaultValue": "master",
+        "EnumValues": {}
+    }
+]
