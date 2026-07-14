@@ -3,7 +3,7 @@
         "Protocol": "TCP",
         "Port": 3000,
         "Name": "Server Port",
-        "Description": "Port for Wiki.js web traffic",
+        "Description": "Port for Wiki.js Web Traffic",
         "Ref": "ServerPort"
     }
 ]
