@@ -3,7 +3,7 @@
         "Protocol": "TCP",
         "Port": 3000,
         "Name": "Server Port",
-        "Description": "Port for PairDrop web UI",
+        "Description": "Port for PairDrop Web Interface",
         "Ref": "ServerPort"
     }
 ]
