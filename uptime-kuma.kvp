@@ -1,0 +1,29 @@
+Meta.DisplayName=Uptime Kuma
+Meta.Description=A clean, highly optimized, self-hosted real-time monitoring dashboard.
+Meta.OS=Windows, Linux
+Meta.AarchSupport=Native
+Meta.Arch=All
+Meta.Author=ersu98
+Meta.URL=https://github.com/louislam/uptime-kuma
+Meta.DisplayImageSource=url:https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg
+Meta.EndpointURIFormat={ip}:{GenericModule.App.Ports.$ServerPort}
+Meta.ConfigManifest=uptime-kumaconfig.json
+Meta.MetaConfigManifest=uptime-kumametaconfig.json
+Meta.ConfigRoot=uptime-kuma.kvp
+Meta.MinAMPVersion=2.6.0.0
+Meta.DockerRequired=False
+Meta.ConfigVersion=2
+Meta.AppConfigId=a329e4d5-8f6a-4b92-91cb-d246061be9af
+
+GenericModule.App.ExecutableWindows=node.exe
+GenericModule.App.ExecutableLinux=node
+GenericModule.App.WorkingDirWindows={{$FullRootDir}}uptime-kuma/server
+GenericModule.App.WorkingDirLinux={{$FullRootDir}}uptime-kuma/server
+GenericModule.App.ArgumentsWindows=server/server.js --port={{$ServerPort}} --host=0.0.0.0 --data-dir=../data/
+GenericModule.App.ArgumentsLinux=server/server.js --port={{$ServerPort}} --host=0.0.0.0 --data-dir=../data/
+
+GenericModule.App.EnvironmentVariables=[{"Name":"PORT","Value":"{{$ServerPort}}"},{"Name":"DATA_DIR","Value":"../data/"}]
+
+App.ApplicationReadyMode=RegexMatch
+Console.AppReadyRegex=.*(?i)(listening|running|uptime-kuma|port).*
+App.UpdateSources=@IncludeJson[uptime-kumaupdates.json]

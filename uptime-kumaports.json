@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 3001,
+        "Name": "Web UI Port",
+        "Description": "Uptime Kuma Web Interface Port",
+        "Ref": "ServerPort"
+    }
+]

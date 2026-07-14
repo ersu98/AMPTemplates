@@ -1,0 +1,14 @@
+[
+    {
+        "DisplayName": "Uptime Kuma Version",
+        "Category": "Updates",
+        "Subcategory": "Version Settings",
+        "Description": "The release version of Uptime Kuma to fetch and compile.",
+        "Keywords": "version,update,release,uptime,kuma",
+        "FieldName": "ReleaseVersion",
+        "InputType": "text",
+        "ParamFieldName": "ReleaseVersion",
+        "DefaultValue": "1.23.17",
+        "EnumValues": {}
+    }
+]
