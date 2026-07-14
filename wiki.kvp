@@ -24,7 +24,7 @@ Meta.NoCommercialUsage=False
 Meta.ConfigVersion=2
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
-Meta.AppConfigId=73250188-786e-4f7f-ba7d-df9964efc91a
+Meta.AppConfigId=91e87d86-c1ea-4c57-8a72-56dc40ef85aa
 
 GenericModule.App.CommandLine={env:NODE_ENV=production}{env:PORT={GenericModule.App.Ports.$ServerPort}} "{{$FullRootDir}}node/bin/node" server/server/index.js
 GenericModule.App.WorkingDir=wiki/server

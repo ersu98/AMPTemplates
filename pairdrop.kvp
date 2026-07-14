@@ -24,7 +24,7 @@ Meta.NoCommercialUsage=False
 Meta.ConfigVersion=2
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
-Meta.AppConfigId=73250188-786e-4f7f-ba7d-df9964efc91b
+Meta.AppConfigId=1c2e7b03-0caa-4e8c-8d15-3c3c572ea1a1
 
 GenericModule.App.CommandLine={env:PORT={GenericModule.App.Ports.$ServerPort}} "{{$FullRootDir}}node/bin/node" server/index.js
 GenericModule.App.WorkingDir=pairdrop/server
