@@ -1,0 +1,14 @@
+[
+    {
+        "DisplayName": "PairDrop Version",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the PairDrop GitHub release tag or branch to clone (e.g. v1.10.0 or master)",
+        "Keywords": "pairdrop,file,sharing,version,release",
+        "FieldName": "ReleaseVersion",
+        "InputType": "text",
+        "ParamFieldName": "ReleaseVersion",
+        "DefaultValue": "master",
+        "EnumValues": {}
+    }
+]

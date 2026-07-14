@@ -1,0 +1,14 @@
+[
+    {
+        "DisplayName": "Wiki.js Version",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the Wiki.js release version (e.g. 2.5.303) to install from GitHub.",
+        "Keywords": "wiki,js,version,release",
+        "FieldName": "ReleaseVersion",
+        "InputType": "text",
+        "ParamFieldName": "ReleaseVersion",
+        "DefaultValue": "2.5.303",
+        "EnumValues": {}
+    }
+]

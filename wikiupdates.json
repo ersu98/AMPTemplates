@@ -1,0 +1,28 @@
+[
+    {
+        "UpdateStageName": "Node.js Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd wiki && if [[ -x node/bin/node ]]; then echo \\\"Node.js already installed. Skipping\\\" && exit 0; else [[ -f node.tar.gz ]] && rm -f node.tar.gz >/dev/null 2>&1; wget -qO node.tar.gz https://nodejs.org/download/release/v20.4.0/node-v20.4.0-linux-x64.tar.gz || { echo \\\"Download failed from the Node.js CDN.\\\"; exit 1; }; mkdir -p node && rm -rf node/* >/dev/null 2>&1; tar -xzf node.tar.gz -C node --strip-components=1 >/dev/null 2>&1; rm -f node.tar.gz >/dev/null 2>&1; echo \\\"Node.js v20.4.0 downloaded\\\"; fi\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Node.js Download (ARM64)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd wiki && if [[ -x node/bin/node ]]; then echo \\\"Node.js already installed. Skipping\\\" && exit 0; else [[ -f node.tar.gz ]] && rm -f node.tar.gz >/dev/null 2>&1; wget -qO node.tar.gz https://nodejs.org/download/release/v20.4.0/node-v20.4.0-linux-arm64.tar.gz || { echo \\\"Download failed from the Node.js CDN.\\\"; exit 1; }; mkdir -p node && rm -rf node/* >/dev/null 2>&1; tar -xzf node.tar.gz -C node --strip-components=1 >/dev/null 2>&1; rm -f node.tar.gz >/dev/null 2>&1; echo \\\"Node.js v20.4.0 ARM64 downloaded\\\"; fi\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Wiki.js Installation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd wiki && ReleaseVersion=\\\"{{ReleaseVersion}}\\\" && [[ ! -f server/server/index.js ]] && { echo \\\"Installing Wiki.js v${ReleaseVersion}...\\\" && mkdir -p server && wget -qO wikijs.tar.gz https://github.com/Requarks/wiki/releases/download/v${ReleaseVersion}/wiki-js.tar.gz && tar -xzf wikijs.tar.gz -C server >/dev/null 2>&1 && rm -f wikijs.tar.gz && cd server && cp config.sample.yml config.yml && sed -i 's/db: postgres/db: sqlite/g' config.yml && sed -i 's/storage:.*//g' config.yml && echo \\\"Wiki.js v${ReleaseVersion} installed\\\"; } || echo \\\"Wiki.js already installed. Skip download.\\\"\"",
+        "SkipOnFailure": false
+    }
+]

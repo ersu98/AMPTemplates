@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 3000,
+        "Name": "Server Port",
+        "Description": "Port for Wiki.js web traffic",
+        "Ref": "ServerPort"
+    }
+]
